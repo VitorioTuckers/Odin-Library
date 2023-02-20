@@ -28,6 +28,6 @@ export class Book {
           <button class="book-delete">&#128465;</button>
           </article>
         `;
-    libraryContainer.insertAdjacentHTML('afterbegin', book);
+    libraryContainer.insertAdjacentHTML('afterbegin', bookCard);
   }
 }
