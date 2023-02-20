@@ -12,16 +12,16 @@ export class Book {
 
   deleteBook() {
     const bookDeleteButton = document.querySelector('.book-delete');
-    const book = document.querySelector('.book-card');
+    const bookCard = document.querySelector('.book-card');
     bookDeleteButton.addEventListener('click', e => {
-      book.remove();
+      bookCard.remove();
       const index = library.indexOf(this);
       index > -1 ? library.splice(index, 1) : null;
     });
   }
 
   displayBook() {
-    const book = `<article class="book-card">
+    const bookCard = `<article class="book-card">
           <h1 class="book-title">${this.title}</h1>
           <h2 class="book-author">${this.author}</h2>
           <h3 class="book-pages">${this.pages} <span>Pages</span></h3>
