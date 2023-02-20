@@ -1,5 +1,5 @@
-const libraryContainer = document.querySelector('#library');
-let library = [];
+const libraryContainer = document.querySelector('.library-container');
+import { library } from './script.js';
 
 export class Book {
   constructor(title, author, pages) {
@@ -13,7 +13,7 @@ export class Book {
   deleteBook() {
     const bookDeleteButton = document.querySelector('.book-delete');
     const bookCard = document.querySelector('.book-card');
-    bookDeleteButton.addEventListener('click', e => {
+    bookDeleteButton.addEventListener('click', () => {
       bookCard.remove();
       const index = library.indexOf(this);
       index > -1 ? library.splice(index, 1) : null;
