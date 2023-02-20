@@ -1,0 +1,183 @@
+:root {
+  --black-coffe: #1a120b;
+  --dark-brown: #3c2a21;
+  --vanilla: #d5cea3;
+  --cream-white: #e5e5cb;
+  font-family: 'Domine', serif;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: var(--cream-white);
+}
+
+.add-btn-box,
+.add-btn,
+.popup,
+.form-text-field,
+.form-submit-btn,
+.book-card {
+  border: solid 0.13rem var(--vanilla);
+  border-radius: 0.5rem;
+}
+
+.library-container,
+.add-btn,
+.form-text-field,
+.form-submit-btn {
+  background-color: var(--dark-brown);
+}
+
+.add-btn,
+.book-delete,
+.form-submit-btn,
+.form-close-btn {
+  cursor: pointer;
+}
+
+.add-btn:active,
+.form-submit-btn:active,
+.book-delete:active {
+  color: var(--vanilla);
+  background-color: var(--black-coffe);
+}
+
+main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--black-coffe);
+}
+
+.page-header {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.add-btn-box {
+  padding: 0.7rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-btn {
+  font-size: 2rem;
+  margin: 1rem 0 1rem 0;
+  align-self: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.library-container {
+  display: flex;
+
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.popup {
+  z-index: 7;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 320px;
+  background-color: var(--black-coffe);
+}
+
+.hide {
+  display: none;
+}
+
+.book-form {
+  width: 100%;
+  height: 100%;
+  padding: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-close-btn {
+  color: var(--cream-white);
+  background-color: var(--black-coffe);
+  font-size: 1.25rem;
+  align-self: flex-end;
+  border: none;
+}
+
+.form-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-submit-btn {
+  font-size: 1.25rem;
+  padding: 0.6rem;
+  margin-bottom: 0.3rem;
+}
+
+label {
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
+}
+
+.form-text-field {
+  font-size: 1.15rem;
+  padding: 0.25rem 1rem;
+}
+
+.book-card {
+  position: relative;
+  text-align: center;
+  background-color: var(--cream-white);
+  font-size: 1.25rem;
+  margin: 0.3rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 350px;
+  border: solid 4px var(--black-coffe);
+}
+
+.book-card > *,
+.pages-number {
+  color: var(--black-coffe);
+}
+
+.book-delete {
+  position: absolute;
+  left: 240px;
+  top: 290px;
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: solid 2px var(--black-coffe);
+  background-color: var(--cream-white);
+}
+
+span {
+  color: black;
+}
