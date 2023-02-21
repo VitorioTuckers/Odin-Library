@@ -13,38 +13,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  color: var(--cream-white);
-}
-
-.add-btn-box,
-.add-btn,
-.popup,
-.form-text-field,
-.form-submit-btn,
-.book-card {
-  border: solid 0.13rem var(--vanilla);
-  border-radius: 0.5rem;
-}
-
-.library-container,
-.add-btn,
-.form-text-field,
-.form-submit-btn {
-  background-color: var(--dark-brown);
-}
-
-.add-btn,
-.book-delete,
-.form-submit-btn,
-.form-close-btn {
-  cursor: pointer;
-}
-
-.add-btn:active,
-.form-submit-btn:active,
-.book-delete:active {
-  color: var(--vanilla);
-  background-color: var(--black-coffe);
+  border-radius: 0.27rem;
 }
 
 main {
@@ -54,7 +23,8 @@ main {
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  background-color: var(--black-coffe);
+  color: var(--black-coffe);
+  background-color: var(--cream-white);
 }
 
 .page-header {
@@ -63,30 +33,22 @@ main {
 }
 
 .add-btn-box {
-  padding: 0.7rem;
-  margin: 1rem;
-  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0.7rem;
+  margin: 1rem;
+  border: solid 0.12rem;
 }
 
 .add-btn {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 1rem 0 1rem 0;
-  align-self: center;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-}
-
-.library-container {
-  display: flex;
-
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
+  border: solid 0.12rem;
 }
 
 .popup {
@@ -97,87 +59,103 @@ main {
   transform: translate(-50%, -50%);
   width: 300px;
   height: 320px;
-  background-color: var(--black-coffe);
-}
-
-.hide {
-  display: none;
+  border: solid 0.12rem;
 }
 
 .book-form {
   width: 100%;
   height: 100%;
-  padding: 0.3rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  background-color: var(--vanilla);
+  color: var(--dark-brown);
 }
 
 .form-close-btn {
-  color: var(--cream-white);
-  background-color: var(--black-coffe);
+  position: absolute;
+  left: 90%;
+  top: 2%;
+  width: 25px;
+  height: 25px;
   font-size: 1.25rem;
-  align-self: flex-end;
-  border: none;
-}
-
-.form-divider {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.form-submit-btn {
-  font-size: 1.25rem;
-  padding: 0.6rem;
-  margin-bottom: 0.3rem;
-}
-
-label {
-  font-size: 1.5rem;
-  letter-spacing: 0.15rem;
+  border: solid 0.12rem;
+  cursor: pointer;
 }
 
 .form-text-field {
-  font-size: 1.15rem;
-  padding: 0.25rem 1rem;
+  font-size: 1.65rem;
+  border: solid 0.12rem;
+  padding: 0.25rem;
+}
+
+::placeholder {
+  color: var(--dark-brown);
+  text-align: center;
+}
+
+.form-submit-btn {
+  font-size: 2rem;
+  border: solid 0.12rem;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--cream-white);
+}
+
+button:active {
+  background-color: var(--black-coffe);
+  color: var(--cream-white);
+}
+
+input[type='text'],
+input[type='number'] {
+  background-color: var(--cream-white);
+  border: none;
+  border-bottom: 0.12rem solid var(--black-coffe);
+  outline: none;
+}
+
+.library-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100vh;
+  border: solid 0.12rem;
 }
 
 .book-card {
   position: relative;
-  text-align: center;
-  background-color: var(--cream-white);
-  font-size: 1.25rem;
-  margin: 0.3rem;
-  padding: 2rem;
+  width: 280px;
+  height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 300px;
-  height: 350px;
-  border: solid 4px var(--black-coffe);
-}
-
-.book-card > *,
-.pages-number {
-  color: var(--black-coffe);
+  text-align: center;
+  margin: 0.5rem;
+  padding: 2rem;
+  border: solid 0.12rem;
+  font-size: 1.25rem;
+  color: var(--cream-white);
+  background-color: var(--black-coffe);
 }
 
 .book-delete {
   position: absolute;
-  left: 240px;
-  top: 290px;
+  left: 85%;
+  top: 88%;
   font-size: 1.5rem;
-  width: 40px;
-  height: 40px;
+  width: 2.3rem;
+  height: 2.3rem;
   border-radius: 50%;
-  border: solid 2px var(--black-coffe);
-  background-color: var(--cream-white);
+  border: solid 0.12rem;
+  text-align: center;
 }
 
-span {
-  color: black;
+.hide {
+  display: none;
 }

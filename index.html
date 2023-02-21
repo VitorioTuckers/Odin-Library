@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Odin Library</title>
+    <script type="module" src="script.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,48 +19,41 @@
       <h1 class="page-header">Tucker's Library</h1>
       <div class="add-btn-box">
         <h2 class="add-btn-header">Add a book!</h2>
-        <button id="add-btn" class="add-btn">+</button>
+        <button class="add-btn">+</button>
       </div>
-      <div id="popup" class="popup hide">
+      <article class="popup hide">
         <form id="form" class="book-form">
           <button type="button" id="form-close" class="form-close-btn">
             &times;
           </button>
-          <div class="form-divider">
-            <label for="title">Title</label>
-            <input
-              class="form-text-field"
-              type="text"
-              id="title"
-              name="title"
-              required
-            />
-          </div>
-          <div class="form-divider">
-            <label for="author">Author</label>
-            <input
-              class="form-text-field"
-              type="text"
-              id="author"
-              name="author"
-              required
-            />
-          </div>
-          <div class="form-divider">
-            <label for="pages">Pages </label>
-            <input
-              class="form-text-field"
-              type="number"
-              id="pages"
-              name="pages"
-              required
-            />
-          </div>
+          <input
+            class="form-text-field"
+            type="text"
+            id="title"
+            name="title"
+            required
+            placeholder="Title"
+          />
+          <input
+            class="form-text-field"
+            type="text"
+            id="author"
+            name="author"
+            required
+            placeholder="Author"
+          />
+          <input
+            class="form-text-field"
+            type="number"
+            id="pages"
+            name="pages"
+            required
+            placeholder="Pages"
+          />
           <button class="form-submit-btn" type="submit">Add book!</button>
         </form>
-      </div>
-      <div class="library-container"></div>
+      </article>
+      <article class="library-container"></article>
     </main>
-    <script type="module" src="script.js"></script>
   </body>
 </html>
