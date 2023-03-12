@@ -19,6 +19,8 @@ formCloseButton.addEventListener('click', togglePopUp);
 form.addEventListener('submit', e => {
   e.preventDefault();
   const formData = Object.fromEntries(new FormData(e.target).entries());
-  library.push(new Book(formData.title, formData.author, formData.pages));
+  library.push(
+    new Book(formData.title, formData.author, formData.pages, formData.bookRead)
+  );
   togglePopUp();
 });

@@ -13,7 +13,11 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  border-radius: 0.27rem;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
 }
 
 main {
@@ -22,7 +26,7 @@ main {
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   color: var(--black-coffe);
   background-color: var(--cream-white);
 }
@@ -35,8 +39,8 @@ main {
 .add-btn-box {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding: 0.7rem;
   margin: 1rem;
   border: solid 0.12rem;
@@ -71,23 +75,45 @@ main {
   padding: 0.5rem;
   background-color: var(--vanilla);
   color: var(--dark-brown);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.book-form > * {
+  border-radius: 0.35rem;
 }
 
 .form-close-btn {
   position: absolute;
-  left: 90%;
-  top: 2%;
-  width: 25px;
-  height: 25px;
-  font-size: 1.25rem;
+  left: 92%;
+  top: 1.5%;
+  width: 20px;
+  height: 20px;
+  font-size: 1rem;
   border: solid 0.12rem;
   cursor: pointer;
 }
 
+.form-text-field,
+.form-submit-btn,
+#is-book-read {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 7px;
+}
+
 .form-text-field {
-  font-size: 1.65rem;
+  font-size: 1.55rem;
   border: solid 0.12rem;
-  padding: 0.25rem;
+  text-align: center;
+}
+
+.form-divider {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+label {
+  font-size: 1.5rem;
+  color: var(--black-coffe);
 }
 
 ::placeholder {
@@ -114,34 +140,46 @@ button:active {
 input[type='text'],
 input[type='number'] {
   background-color: var(--cream-white);
-  border: none;
-  border-bottom: 0.12rem solid var(--black-coffe);
   outline: none;
+}
+
+input[type='checkbox'] {
+  accent-color: var(--cream-white);
 }
 
 .library-container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   border: solid 0.12rem;
+  overflow: auto;
 }
 
 .book-card {
   position: relative;
-  width: 280px;
-  height: 360px;
+  width: 360px;
+  height: 420px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   text-align: center;
   margin: 0.5rem;
-  padding: 2rem;
+  padding: 0.5rem 0.5rem 2rem;
   border: solid 0.12rem;
-  font-size: 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
   color: var(--cream-white);
   background-color: var(--black-coffe);
+}
+
+.book-title {
+  font-size: 3rem;
+}
+
+.book-author {
+  font-size: 2.5rem;
 }
 
 .book-delete {
@@ -156,6 +194,24 @@ input[type='number'] {
   text-align: center;
 }
 
+.book-change {
+  position: absolute;
+  left: 5%;
+  top: 88%;
+  font-size: 1.5rem;
+  width: 6.3rem;
+  height: 2.3rem;
+  border: solid 0.12rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
 .hide {
   display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  :root {
+    font-size: 14px;
+  }
 }

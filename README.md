@@ -10,4 +10,4 @@ Open the following link on your preferred browser:
 
 ## Description
 
-This is a library style app where the user can input information about a given book of their choice. this is a work in progress version.
+This is a library style app where the user can input information about a book (title, author, pages and if the book is already read). A 'book card' is then created and the user has the option to change the read status of the book or delete it from the library.
